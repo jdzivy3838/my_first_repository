@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Ignored tests",
+    "matchedStatuses": [ "skipped" ]
+  },
+  {
+    "name": "Performance Defects",
+    "traceRegex": ".*TimeoutException.*",
+    "matchedStatuses": [ "failed" ]
+  },
+  {
+    "name": "Infrastructure Problems",
+    "traceRegex": ".*Object reference.*",
+    "matchedStatuses": [ "failed" ]
+  }
+]

@@ -5,10 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Allure.Commons" Version="3.5.0.4" />
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="88.0.4324.9600" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver.Win64" Version="0.29.0" />
+    <PackageReference Include="Selenium.WebDriver.IEDriver" Version="3.150.1.2" />
     <PackageReference Include="SpecFlow" Version="3.4.8" />
     <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.4.211" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.4.8" />
+    <PackageReference Include="SpecRun.Runner" Version="3.7.3" />
 
     
     <PackageReference Include="SpecRun.SpecFlow" Version="3.4.19" />
@@ -23,11 +33,25 @@
     
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     
+
+    
+
+    
+
+    
+
+    
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Drivers\" />
     <Folder Include="Hooks\" />
+    <Folder Include="Execution\" />
+    <Folder Include="Setup\" />
+    <Folder Include="Profiles\" />
+    <Folder Include="PageObjects\" />
   </ItemGroup>
 
 </Project>

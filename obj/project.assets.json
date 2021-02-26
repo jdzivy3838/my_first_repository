@@ -2,6 +2,26 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.8": {
+      "Allure.Commons/3.5.0.4": {
+        "type": "package",
+        "dependencies": {
+          "MimeTypesMap": "1.0.8",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/net45/Allure.Commons.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Allure.Commons.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net45/allureConfig.Template.json": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "BoDi/1.4.1": {
         "type": "package",
         "compile": {
@@ -24,6 +44,30 @@
         },
         "runtime": {
           "lib/net45/Cucumber.Messages.dll": {}
+        }
+      },
+      "DotNetSeleniumExtras.PageObjects/3.11.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.10.0"
+        },
+        "compile": {
+          "lib/net45/SeleniumExtras.PageObjects.dll": {}
+        },
+        "runtime": {
+          "lib/net45/SeleniumExtras.PageObjects.dll": {}
+        }
+      },
+      "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.10.0"
+        },
+        "compile": {
+          "lib/net45/SeleniumExtras.WaitHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net45/SeleniumExtras.WaitHelpers.dll": {}
         }
       },
       "FluentAssertions/5.10.3": {
@@ -87,6 +131,81 @@
           "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
         }
       },
+      "MimeTypesMap/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net452/MimeTypesMap.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MimeTypesMap.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RestSharp/106.11.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Web"
+        ],
+        "compile": {
+          "lib/net452/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net452/RestSharp.dll": {}
+        }
+      },
+      "Selenium.Support/3.141.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.141.0"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net45/WebDriver.Support.dll": {}
+        },
+        "runtime": {
+          "lib/net45/WebDriver.Support.dll": {}
+        }
+      },
+      "Selenium.WebDriver/3.141.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Drawing"
+        ],
+        "compile": {
+          "lib/net45/WebDriver.dll": {}
+        },
+        "runtime": {
+          "lib/net45/WebDriver.dll": {}
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/88.0.4324.9600": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
+        }
+      },
+      "Selenium.WebDriver.GeckoDriver.Win64/0.29.0": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.GeckoDriver.Win64.targets": {}
+        }
+      },
+      "Selenium.WebDriver.IEDriver/3.150.1.2": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.IEDriver.targets": {}
+        }
+      },
       "SpecFlow/3.4.8": {
         "type": "package",
         "dependencies": {
@@ -135,7 +254,7 @@
           "buildMultiTargeting/SpecFlow.Tools.MsBuild.Generation.props": {}
         }
       },
-      "SpecRun.Runner/3.4.19": {
+      "SpecRun.Runner/3.7.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "15.0.0"
@@ -358,7 +477,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "System.ValueTuple/4.4.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
         "frameworkAssemblies": [
           "mscorlib"
@@ -388,6 +507,23 @@
     }
   },
   "libraries": {
+    "Allure.Commons/3.5.0.4": {
+      "sha512": "Z70v7jcxDypsHMnAvnbs1eTw0kdi4Uv6o0Z5gSGgqrH6ZZz6M/mB9IjQn6vE9B2ZWwT21mc38XtAdTl17faFNg==",
+      "type": "package",
+      "path": "allure.commons/3.5.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "allure-net.png",
+        "allure.commons.3.5.0.4.nupkg.sha512",
+        "allure.commons.nuspec",
+        "content/allureConfig.Template.json",
+        "contentFiles/any/net45/allureConfig.Template.json",
+        "contentFiles/any/netstandard2.0/allureConfig.Template.json",
+        "lib/net45/Allure.Commons.dll",
+        "lib/netstandard2.0/Allure.Commons.dll"
+      ]
+    },
     "BoDi/1.4.1": {
       "sha512": "x1D7r5VDm7zog+3DlyOo1fXas1RhYmw9e/wIemdjcTeHV4fp4OoGb0Jz4i2E9RShPoOItUfFklm3nxTLcLLwSg==",
       "type": "package",
@@ -418,6 +554,36 @@
         "cucumber.messages.nuspec",
         "lib/net45/Cucumber.Messages.dll",
         "lib/netstandard2.0/Cucumber.Messages.dll"
+      ]
+    },
+    "DotNetSeleniumExtras.PageObjects/3.11.0": {
+      "sha512": "DJCLQ3beq1fzqpeQ5jTZwDqmzbOD2Xxsb/jCyShYam88CNwGGn5aBBqu4LVSj0sy0Ai76OauQQncYlC48VvQUQ==",
+      "type": "package",
+      "path": "dotnetseleniumextras.pageobjects/3.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512",
+        "dotnetseleniumextras.pageobjects.nuspec",
+        "lib/net35/SeleniumExtras.PageObjects.dll",
+        "lib/net40/SeleniumExtras.PageObjects.dll",
+        "lib/net45/SeleniumExtras.PageObjects.dll",
+        "lib/netstandard2.0/SeleniumExtras.PageObjects.dll"
+      ]
+    },
+    "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
+      "sha512": "xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
+      "type": "package",
+      "path": "dotnetseleniumextras.waithelpers/3.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
+        "dotnetseleniumextras.waithelpers.nuspec",
+        "lib/net35/SeleniumExtras.WaitHelpers.dll",
+        "lib/net40/SeleniumExtras.WaitHelpers.dll",
+        "lib/net45/SeleniumExtras.WaitHelpers.dll",
+        "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll"
       ]
     },
     "FluentAssertions/5.10.3": {
@@ -540,6 +706,152 @@
         "buildMultiTargeting/Microsoft.NET.Test.Sdk.props",
         "microsoft.net.test.sdk.16.5.0.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
+      ]
+    },
+    "MimeTypesMap/1.0.8": {
+      "sha512": "iOm6Zar+yVROhlyrGGSJTfThvNoHLUeYeQQND9YD/ot/nA2qsWUp9kP2MHTdF9P7I8afW6eCf8vdELLZjDFdSQ==",
+      "type": "package",
+      "path": "mimetypesmap/1.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MimeTypesMap.dll",
+        "lib/netstandard1.1/MimeTypesMap.dll",
+        "lib/netstandard2.0/MimeTypesMap.dll",
+        "mimetypesmap.1.0.8.nupkg.sha512",
+        "mimetypesmap.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "RestSharp/106.11.7": {
+      "sha512": "NzndH096CTulvq+ihr7u1mBJ29oukdi9A8bypQJk+kaHxbRzTTrtgsEEQAb04ptTUZmQa7cgo7uF5z7NuEPX1Q==",
+      "type": "package",
+      "path": "restsharp/106.11.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.11.7.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
+      ]
+    },
+    "Selenium.Support/3.141.0": {
+      "sha512": "F4sxMCXGyqWtbw5qsniJRgza2UsBnslHwFgNA2p7hPxvJhqg73lyXu/ZscJ7FSfRvq3eJrosysv92+4sZ3vWsg==",
+      "type": "package",
+      "path": "selenium.support/3.141.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/WebDriver.Support.dll",
+        "lib/net35/WebDriver.Support.xml",
+        "lib/net40/WebDriver.Support.dll",
+        "lib/net40/WebDriver.Support.xml",
+        "lib/net45/WebDriver.Support.dll",
+        "lib/net45/WebDriver.Support.xml",
+        "lib/netstandard2.0/WebDriver.Support.dll",
+        "lib/netstandard2.0/WebDriver.Support.xml",
+        "selenium.support.3.141.0.nupkg.sha512",
+        "selenium.support.nuspec"
+      ]
+    },
+    "Selenium.WebDriver/3.141.0": {
+      "sha512": "wPqzXO3f79DzqauTZSzLMKiaBCN0Z2Mv7KvWP+hnV6EL88zh/pJJnFtdIR1X5wa3hsTOpF/bBJs45rz7kArsiA==",
+      "type": "package",
+      "path": "selenium.webdriver/3.141.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/WebDriver.dll",
+        "lib/net35/WebDriver.xml",
+        "lib/net40/WebDriver.dll",
+        "lib/net40/WebDriver.xml",
+        "lib/net45/WebDriver.dll",
+        "lib/net45/WebDriver.xml",
+        "lib/netstandard2.0/WebDriver.dll",
+        "lib/netstandard2.0/WebDriver.xml",
+        "selenium.webdriver.3.141.0.nupkg.sha512",
+        "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.ChromeDriver/88.0.4324.9600": {
+      "sha512": "tFYi/cACBE+lq+aQMMCFDCZChkq7jQHm3yNh040r2WeuI+WBg3MDna9o+8x6d+inxdbCXDABnifqKb4CynRQLQ==",
+      "type": "package",
+      "path": "selenium.webdriver.chromedriver/88.0.4324.9600",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/DefinePropertiesChromeDriver.targets",
+        "build/Selenium.WebDriver.ChromeDriver.targets",
+        "driver/linux64/chromedriver",
+        "driver/mac64/chromedriver",
+        "driver/win32/chromedriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.chromedriver.88.0.4324.9600.nupkg.sha512",
+        "selenium.webdriver.chromedriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.GeckoDriver.Win64/0.29.0": {
+      "sha512": "Zziv9mXM7/Aegoh1PwZYE+P/nJJpwSVe/43dVvQOxVLIPLIJv+Z+iKNtf43B26a0AHlsiN4wm+DNpgCg1V8vLQ==",
+      "type": "package",
+      "path": "selenium.webdriver.geckodriver.win64/0.29.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/DefinePropertiesGeckoDriver.Win64.targets",
+        "build/Selenium.WebDriver.GeckoDriver.Win64.targets",
+        "driver/geckodriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.geckodriver.win64.0.29.0.nupkg.sha512",
+        "selenium.webdriver.geckodriver.win64.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.IEDriver/3.150.1.2": {
+      "sha512": "mesqb+Gxb1YxI/tzkdhrP3zMbPky11ErP+nfJCIexiDS+CoGC85xJl+9/dQsN/5AX/boq0lUydaavjGusPJSnw==",
+      "type": "package",
+      "path": "selenium.webdriver.iedriver/3.150.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/DefinePropertiesIEDriver.targets",
+        "build/Selenium.WebDriver.IEDriver.targets",
+        "driver/IEDriverServer.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.iedriver.3.150.1.2.nupkg.sha512",
+        "selenium.webdriver.iedriver.nuspec"
       ]
     },
     "SpecFlow/3.4.8": {
@@ -767,10 +1079,10 @@
         "tasks/netcoreapp2.1/Utf8Json.dll"
       ]
     },
-    "SpecRun.Runner/3.4.19": {
-      "sha512": "6h0RX5tHPJ+t8BGCmqz5Sz8PWmQ/pjIzmRlPhlQru1R4W6pMi7kQAQ9jCCO5BafEHk0weOeCM3TeCcS0bcgGfg==",
+    "SpecRun.Runner/3.7.3": {
+      "sha512": "p4MJ0cGGUjaLfrv4bES8u2PJX14zvr32gtd27OnrB+Uax3ES0arMS+Wv/dOlpqSg/HNvN1OAwoTV5A7JHMt6NQ==",
       "type": "package",
-      "path": "specrun.runner/3.4.19",
+      "path": "specrun.runner/3.7.3",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -787,7 +1099,7 @@
         "docs/Sample.runsettings",
         "docs/readme.txt",
         "readme.txt",
-        "specrun.runner.3.4.19.nupkg.sha512",
+        "specrun.runner.3.7.3.nupkg.sha512",
         "specrun.runner.nuspec",
         "templates/CucumberJson.cshtml",
         "templates/ReportTemplate.cshtml",
@@ -837,6 +1149,39 @@
         "tools/net461/TechTalk.SpecRun.VisualStudio.TestAdapter.dll",
         "tools/net461/TechTalk.SpecRun.VisualStudio.TestAdapter.dll.config",
         "tools/net461/TechTalk.SpecRun.dll",
+        "tools/net5.0/BoDi.dll",
+        "tools/net5.0/CommandLine.dll",
+        "tools/net5.0/FSharp.Core.dll",
+        "tools/net5.0/Microsoft.IdentityModel.Logging.dll",
+        "tools/net5.0/Microsoft.IdentityModel.Tokens.dll",
+        "tools/net5.0/Microsoft.VisualStudio.Threading.dll",
+        "tools/net5.0/Microsoft.VisualStudio.Validation.dll",
+        "tools/net5.0/Newtonsoft.Json.dll",
+        "tools/net5.0/SpecFlow.Plus.Shared.dll",
+        "tools/net5.0/StreamJsonRpc.dll",
+        "tools/net5.0/System.Configuration.ConfigurationManager.dll",
+        "tools/net5.0/System.IdentityModel.Tokens.Jwt.dll",
+        "tools/net5.0/System.Security.Cryptography.ProtectedData.dll",
+        "tools/net5.0/System.Security.Permissions.dll",
+        "tools/net5.0/TechTalk.SpecFlow.Plus.RPC.dll",
+        "tools/net5.0/TechTalk.SpecRun.Common.dll",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.anycpu.net5_0.dll",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.anycpu.net5_0.dll.config",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.anycpu.net5_0.pdb",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.anycpu.net5_0.runtimeconfig.json",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.dll",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.dll.config",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.x86.net5_0.dll",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.x86.net5_0.dll.config",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.x86.net5_0.pdb",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Executor.x86.net5_0.runtimeconfig.json",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Interfaces.dll",
+        "tools/net5.0/TechTalk.SpecRun.Framework.Utils.dll",
+        "tools/net5.0/TechTalk.SpecRun.Framework.dll",
+        "tools/net5.0/TechTalk.SpecRun.Framework.dll.config",
+        "tools/net5.0/TechTalk.SpecRun.VisualStudio.TestAdapter.dll",
+        "tools/net5.0/TechTalk.SpecRun.VisualStudio.TestAdapter.dll.config",
+        "tools/net5.0/TechTalk.SpecRun.dll",
         "tools/netcoreapp2.1/BoDi.dll",
         "tools/netcoreapp2.1/CommandLine.dll",
         "tools/netcoreapp2.1/FSharp.Core.dll",
@@ -1469,10 +1814,10 @@
         "version.txt"
       ]
     },
-    "System.ValueTuple/4.4.0": {
-      "sha512": "BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
-      "path": "system.valuetuple/4.4.0",
+      "path": "system.valuetuple/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1490,6 +1835,7 @@
         "lib/netstandard2.0/_._",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -1497,18 +1843,16 @@
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net461/System.ValueTuple.dll",
-        "ref/net461/System.ValueTuple.xml",
         "ref/net47/System.ValueTuple.dll",
-        "ref/net47/System.ValueTuple.xml",
         "ref/netcoreapp2.0/_._",
         "ref/netstandard2.0/_._",
         "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.valuetuple.4.4.0.nupkg.sha512",
+        "system.valuetuple.4.5.0.nupkg.sha512",
         "system.valuetuple.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1534,12 +1878,23 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
+      "Allure.Commons >= 3.5.0.4",
+      "DotNetSeleniumExtras.PageObjects >= 3.11.0",
+      "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
       "FluentAssertions >= 5.10.3",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
+      "RestSharp >= 106.11.7",
+      "Selenium.Support >= 3.141.0",
+      "Selenium.WebDriver >= 3.141.0",
+      "Selenium.WebDriver.ChromeDriver >= 88.0.4324.9600",
+      "Selenium.WebDriver.GeckoDriver.Win64 >= 0.29.0",
+      "Selenium.WebDriver.IEDriver >= 3.150.1.2",
       "SpecFlow >= 3.4.8",
       "SpecFlow.Plus.LivingDocPlugin >= 3.4.211",
       "SpecFlow.Tools.MsBuild.Generation >= 3.4.8",
-      "SpecRun.SpecFlow >= 3.4.19"
+      "SpecRun.Runner >= 3.7.3",
+      "SpecRun.SpecFlow >= 3.4.19",
+      "System.ValueTuple >= 4.5.0"
     ]
   },
   "packageFolders": {
@@ -1559,12 +1914,14 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\FS0018\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\FS0018\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net48"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1583,6 +1940,18 @@
       "net48": {
         "targetAlias": "net48",
         "dependencies": {
+          "Allure.Commons": {
+            "target": "Package",
+            "version": "[3.5.0.4, )"
+          },
+          "DotNetSeleniumExtras.PageObjects": {
+            "target": "Package",
+            "version": "[3.11.0, )"
+          },
+          "DotNetSeleniumExtras.WaitHelpers": {
+            "target": "Package",
+            "version": "[3.11.0, )"
+          },
           "FluentAssertions": {
             "target": "Package",
             "version": "[5.10.3, )"
@@ -1590,6 +1959,30 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.5.0, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[106.11.7, )"
+          },
+          "Selenium.Support": {
+            "target": "Package",
+            "version": "[3.141.0, )"
+          },
+          "Selenium.WebDriver": {
+            "target": "Package",
+            "version": "[3.141.0, )"
+          },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[88.0.4324.9600, )"
+          },
+          "Selenium.WebDriver.GeckoDriver.Win64": {
+            "target": "Package",
+            "version": "[0.29.0, )"
+          },
+          "Selenium.WebDriver.IEDriver": {
+            "target": "Package",
+            "version": "[3.150.1.2, )"
           },
           "SpecFlow": {
             "target": "Package",
@@ -1603,9 +1996,17 @@
             "target": "Package",
             "version": "[3.4.8, )"
           },
+          "SpecRun.Runner": {
+            "target": "Package",
+            "version": "[3.7.3, )"
+          },
           "SpecRun.SpecFlow": {
             "target": "Package",
             "version": "[3.4.19, )"
+          },
+          "System.ValueTuple": {
+            "target": "Package",
+            "version": "[4.5.0, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"

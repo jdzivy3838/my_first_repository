@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestProfile xmlns="http://www.specflow.org/schemas/plus/TestProfile/1.5">
+  <Settings projectName="TestAutomation" projectId="{ed6f78ad-8c0e-41c7-8306-7596e1ddbaa3}" />
+  <Execution stopAfterFailures="0" testThreadCount="3" testSchedulingMode="Random" retryCount="0" retryFor="Failing" apartmentState="MTA"/>
+  <Environment testThreadIsolation="AppDomain"/>
+  <!-- For collecting by a SpecRun server update and enable the 
+  g element. For using the 
+      collected statistics, set testSchedulingMode="Adaptive" attribute on the <Execution> element.
+    <Server serverUrl="http://specrunserver:6365" publishResults="true" />
+  -->
+  <TestAssemblyPaths>
+    <TestAssemblyPath>SpecFlowTemplateProject.dll</TestAssemblyPath>
+  </TestAssemblyPaths>  
+  <Filter>@SIT</Filter>
+  <DeploymentTransformation>
+    <Steps>
+      <RelocateConfigurationFile target="SpecFlowTemplateProject.dll.{TestThreadId}.config" />
+      <ConfigFileTransformation configFile="App.config" >
+        <Transformation>
+          <![CDATA[<?xml version="1.0" encoding="utf-8"?>
+							<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+              
+                              <appSettings>
+                                <add key="Browser" value="chrome"  xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)" />
+                                <add key="Environment" value="SIT" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)" />                                                         
+                           
+                                <!-- just for SSO tests-->
+                                <add key="google" value="https://www.google.com" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <!-- rest urls-->
+                                <add key="SiteCoreURL" value="https://cd-ele-acc.innogy.com/privatkunden" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="SiteCoreURL_en" value ="https://cd-ele-acc.innogy.com/privatkunden" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="BaseURL" value="https://cd-ele-acc.innogy.com" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key ="SiteCoreCM" value="https://cm-ele-acc.innogy.com" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                           
+                                <!-- JBoss URI -->
+                                <add key="JBoss_LoginUser_URI" value="/leankko/rest/ele/api/v1/df/user/login" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="JBoss_LogoutUser_URI" value="/leankko/rest/ele/api/v1/df/user/logout" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="JBoss_SessionToken_URI" value="/leankko/rest/ele/api/v1/df/user/gettoken" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="JBoss_ChangePassword_URI" value="/leankko/rest/ele/api/v1/df/password/change" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="JBoss_ValidatePassword_URI" value="/leankko/rest/ele/api/v1/df/password/validate" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="JBoss_RegisterUser_URI" value="/leankko/rest/ele/api/v1/df/user/register" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="JBoss_DeleteUser_URI" value="/leankko/rest/ele/api/v1/df/user/delete" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="JBoss_CheckName_URI" value="/leankko/rest/ele/api/v1/df/user/check/name" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="JBoss_Ping_URI" value="/leankko/rest/ele/api/v1/df/user/ping" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                
+                                <!-- Meter reading URI-->
+                                <add key="meterReadingPage" value="https://cd-ele-acc.innogy.com/privatkunden/meine-ele/services/zaehlerstand/endzaehlerstand" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key ="meterReading" value="https://cd-ele-acc.innogy.com/privatkunden/meine-ele/services/zaehlerstand/detailseite" xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+
+                                <!--NLI-->
+                                <add key="NLI_AuthName" value="eai-sc"  xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="NLI_AuthPassword" value="eai-sc2017"  xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>
+                                <add key="NLI_Endpoint" value="https://ecm-df-eai-acc.innogy.com/b2bbp-engine/rs/plain/"  xdt:Locator="Match(key)" xdt:Transform="SetAttributes(value)"/>   
+                                                                                                
+                             </appSettings>                             
+                              
+							</configuration>
+						]]>
+        </Transformation>
+      </ConfigFileTransformation>
+    </Steps>
+  </DeploymentTransformation>
+  <!--
+   <Targets>
+    <Target name="internet explorer">
+      <Filter>Browser_IE</Filter>
+    </Target>
+    <Target name="chrome">
+      <Filter>Browser_Chrome</Filter>
+    </Target>
+    <Target name="firefox">
+      <Filter>Browser_Firefox</Filter>
+    </Target>
+    <Target name="ALL">      
+     </Target>
+  </Targets>-->
+</TestProfile>
